@@ -337,7 +337,9 @@ button:hover .star-6 {
 .second-page {
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(39, 28, 28, 0.143);
 }
 
 .second-page h1 {
@@ -359,8 +361,7 @@ button:hover .star-6 {
 }
 
 .second-page .cards {
-  height: 700px;
-  background-color: rgba(39, 28, 28, 0.143);
+  height: 570px;
 }
 
 /* css of card1 */
@@ -575,3 +576,80 @@ button:hover .star-6 {
   border-radius: 100px;
 }
 
+/* third page css */
+
+.third-page {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: rgba(60, 23, 23, 0.263);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature {
+  background: linear-gradient(to right, #f00, #ff0, #0ff, #0f0);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.password-strength {
+  height: 550px;
+  width: 90%;
+  background-color: rgb(166, 249, 166);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 20px;
+}
+
+.password-strength input {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  /* background-color: rgba(0, 0, 0, 0.876); */
+  /* color: white; */
+  border: none;
+  outline: none;
+  border-bottom: 3px solid red;
+  position: absolute;
+
+}
+
+.password-strength span{
+  position: relative;
+  top: 20px;
+  right: 9%;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+
+.password-strength input:focus~span{
+color: green;
+font-size: 0.75em;
+transform: translateY(-40px);
+}
+
+.pass-strenth-bar{
+  width:400px ;
+}
+
+
+.pass-strenth-bar::after{
+  content: "";
+  position: relative;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  display: block;
+  background-color: yellow;
+}
+
+.password-strength button{}
