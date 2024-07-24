@@ -28,6 +28,32 @@ function scrolldown() {
   });
 }
 
+document.getElementById("password").addEventListener("input", function () {
+  const password = this.value;
+
+  let strengthbar = document.getElementById("pass-strength");
+
+  let strength = 0;
+
+  if (password.length >= 8) strength += 2;
+  if (/[A-Z]/.test(password)) strength += 2;
+  if (/[a-z]/.test(password)) strength += 2;
+  if (/[0-9]/.test(password)) strength++;
+  if (/[\W]/.test(password)) strength++;
+
+  if (strength >= 8) {
+    strengthbar.classList.add("green");
+  }
+  if (strength <= 6 && strength >= 4) {
+    strengthbar.classList.add("yellow");
+  }
+  if (strength <= 4) {
+    strengthbar.classList.add("red");
+  }
+
+  console.log(strength);
+});
+
 // gsap code
 
 gsap.from(".scroller .scroll", {
