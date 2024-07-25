@@ -60,9 +60,7 @@ body {
 .main span {
   color: red;
 }
-
 /* navbar style  */
-
 .button-container {
   display: flex;
   background-color: rgba(245, 73, 144);
@@ -97,7 +95,6 @@ body {
 .icon {
   font-size: 20px;
 }
-
 /* editor css */
 #toggle_checkbox {
   display: none;
@@ -172,7 +169,6 @@ label {
 #toggle_checkbox:checked + label .moon {
   bottom: 8px;
 }
-
 /* button css */
 .main button {
   margin-top: 100px;
@@ -181,7 +177,6 @@ label {
   background: #fec195;
   font-size: 17px;
   font-weight: 500;
-  /* color: #181818; */
   border: 3px solid #fec195;
   border-radius: 8px;
   box-shadow: 0 0 0 #fec1958c;
@@ -331,15 +326,14 @@ button:hover .star-6 {
   align-items: center;
   margin-top: 10%;
 }
-
 /* second page  */
-
 .second-page {
   height: 100vh;
   width: 100vw;
   position: relative;
   overflow: hidden;
   background-color: rgba(39, 28, 28, 0.143);
+  background-color: rgb(154, 154, 234);
 }
 
 .second-page h1 {
@@ -363,7 +357,6 @@ button:hover .star-6 {
 .second-page .cards {
   height: 570px;
 }
-
 /* css of card1 */
 .second-page .card1 {
   margin: 5%;
@@ -426,7 +419,6 @@ button:hover .star-6 {
   scale: 0;
   transform: rotate(-105deg);
 }
-
 /* css of card 2 */
 .card2 {
   position: relative;
@@ -489,7 +481,6 @@ button:hover .star-6 {
   color: #777;
   line-height: 1.4;
 }
-
 /* css of card3 */
 :root {
   --main-color: #000;
@@ -575,9 +566,7 @@ button:hover .star-6 {
   background-color: var(--main-color);
   border-radius: 100px;
 }
-
 /* third page css */
-
 .third-page {
   height: 100vh;
   width: 100vw;
@@ -621,10 +610,12 @@ button:hover .star-6 {
   position: absolute;
   border-radius: 28px;
   background: #e0e0e0;
-  box-shadow:  6px 6px 12px #8d8d8d,
-               -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #8d8d8d, -6px -6px 12px #ffffff;
 }
 
+.password-strength h3 {
+  color: red;
+}
 
 .password-strength input {
   width: 400px;
@@ -638,10 +629,24 @@ button:hover .star-6 {
 
 .password-strength span {
   position: relative;
-  top: 45px;
-  right: 9%;
+  top: 0;
+  right: 15%;
   pointer-events: none;
   transition: 0.3s ease-in-out;
+  color: red;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.password-strength p{
+  position: relative;
+  top: 80px;
+  left: 130px;
+  border: 2px solid red;
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: 65px;
+  /* pointer-events: none; */
 }
 
 .password-strength input:focus ~ span {
@@ -654,7 +659,7 @@ button:hover .star-6 {
   height: 3px;
   width: 0;
   position: relative;
-  top: 10px;
+  bottom: 35px;
   right: 14%;
 }
 
@@ -681,4 +686,141 @@ button:hover .star-6 {
   position: relative;
   right: 0px;
   transition: 0.3s ease-in;
+}
+/* fourth page css  */
+.fourth-page {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: #ebd18d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+/* form css  */
+.contained {
+  height: 550px;
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.155);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #171717;
+  border-radius: 25px;
+  height: 500px;
+  width: 400px;
+}
+
+#heading {
+  text-align: center;
+  margin: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.field {
+  border-radius: 25px;
+  padding: 0.6em;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  color: #d3d3d3;
+  position: absolute;
+  width: 23%;
+  height: 30px;
+}
+
+.form span {
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.input-field:focus ~ span {
+  font-size: 0.75em;
+  opacity: 0;
+}
+
+.form .btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2.5em;
+}
+
+.button1 {
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 50%;
+  margin-right: 0.5em;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button1:hover {
+  background-color: black;
+  color: white;
+}
+
+.button2 {
+  padding: 0.5em;
+  width: 50%;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button2:hover {
+  background-color: black;
+  color: white;
+}
+
+.button3 {
+  margin-bottom: 3em;
+  padding: 0.5em;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button3:hover {
+  background-color: red;
+  color: white;
+}
+
+#helo {
+  margin-bottom: 100px;
+  height: 100px;
+}
+
+.last {
+  height: 100px;
+  display: grid;
+  place-items: center;
 }

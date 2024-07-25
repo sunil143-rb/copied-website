@@ -2,7 +2,6 @@ let input = document.getElementById("toggle_checkbox");
 let firstpage = document.getElementById("first");
 
 let flag = 0;
-
 input.addEventListener("click", () => {
   if (flag == 0) {
     document.body.style.backgroundColor = "black";
@@ -15,6 +14,20 @@ input.addEventListener("click", () => {
   }
 });
 
+let password = document.getElementById("password");
+let para = document.getElementById("para");
+
+para.addEventListener("click", ()=>{
+  
+  if (password.type === "password") {
+    para.innerHTML = "Hide";
+    password.type = "text";
+  } else {
+    password.type = "password";
+    para.innerHTML = "Show";
+    
+  }
+})
 function scrolltop() {
   window.scrollTo({
     top: 0,
@@ -27,7 +40,6 @@ function scrolldown() {
     behavior: "smooth",
   });
 }
-
 document.getElementById("password").addEventListener("input", function () {
   const password = this.value;
 
@@ -51,9 +63,19 @@ document.getElementById("password").addEventListener("input", function () {
     strengthbar.classList.add("red");
   }
 
-  console.log(strength);
 });
-
+function feature() {
+  window.scrollTo({
+    top: "1500",
+    behavior: "smooth",
+  });
+}
+function contact() {
+  window.scrollTo({
+    top: "2300",
+    behavior: "smooth",
+  });
+}
 // gsap code
 
 gsap.from(".scroller .scroll", {
